@@ -1,0 +1,377 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "poppins", sans-serif;
+  overflow-x: hidden;
+  min-height: 3000px;
+}
+
+/* Navbar */
+
+nav {
+  display: flex;
+  background-color: darkslategrey;
+  justify-content: space-between;
+  color: white;
+  align-items: center;
+  z-index: 1;
+  padding: 1.4rem 7%;
+  border-bottom: 1px solid rgb(35, 59, 59);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+nav .logo {
+  font-family: "poppins", sans-serif;
+  letter-spacing: 1px;
+  font-size: 1.4rem;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  width: 40%;
+  justify-content: space-between;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.8em;
+}
+
+nav ul li a:hover {
+  color: rgb(105, 170, 170);
+  transition: 1s;
+}
+
+/* Hamburger Menu */
+.menu-toogle {
+  display: none;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  position: relative;
+}
+
+.menu-toogle input {
+  position: absolute;
+  width: 40px;
+  height: 28px;
+  left: -6px;
+  top: -3px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.menu-toogle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: rgb(238, 238, 238);
+  border-radius: 3px;
+  transition: all 0.5s;
+}
+
+/* Hamburger menu animasi */
+
+.menu-toogle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+
+.menu-toogle span:nth-child(4) {
+  transform-origin: 0 100%;
+}
+
+.menu-toogle input:checked ~ span:nth-child(2) {
+  background-color: white;
+  transform: rotate(46deg) translate(-1px, -1px);
+}
+
+.menu-toogle input:checked ~ span:nth-child(4) {
+  background-color: white;
+  transform: rotate(-46deg) translate(-1px, 0);
+}
+
+.menu-toogle input:checked ~ span:nth-child(3) {
+  opacity: 0;
+  transform: scale(0);
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+}
+
+.hero .content h1 {
+  font-size: 5em;
+  color: darkslategrey;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.hero .content h1 span {
+  color: rgb(105, 170, 170);
+}
+
+.hero .content p {
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  line-height: 1.4;
+  font-weight: 100;
+  text-shadow: 1px 1px 3px rgba(2, 2, 7, 0.808);
+  mix-blend-mode: difference;
+}
+
+.hero .content .cta {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  color: white;
+  background-color: darkslategrey;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.664);
+  text-decoration: none;
+}
+
+.hero .content .cta:hover {
+  background-color: rgb(105, 170, 170);
+  transition: 1.5s;
+  color: darkslategrey;
+  text-shadow: 1px 1px 3px rgb(255, 255, 255);
+}
+
+/* Hero Section End */
+
+/* About Section Start */
+.about,
+.portfolio {
+  padding: 6rem 7% 1.4rem;
+}
+
+.about h2,
+.portfolio h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+  color: rgb(105, 170, 170);
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.about h2 span,
+.portfolio h2 span {
+  color: darkslategrey;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.about .row {
+  display: flex;
+  border-top: 100px;
+}
+
+.about .row .about-img {
+  flex: 1 1 45rem;
+}
+
+.about .row .about-img {
+  width: 100%;
+}
+
+.about .row .about-img img {
+  width: 95%;
+  /* background-color: aqua; */
+}
+
+.about .row .content {
+  flex: 1 1 35rem;
+  padding: 0 1rem;
+}
+
+.about .row .content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: darkslategrey;
+}
+
+.about .row .content p {
+  margin-bottom: 0.6rem;
+  font-size: 1.5rem;
+  font-weight: 150;
+  line-height: 1.8rem;
+  color: darkslategrey;
+  text-shadow: 1px 1px 1px rgba(2, 2, 7, 0.808);
+}
+
+/* About Section End */
+
+/* Portfolio Section End */
+.portfolio h2 {
+  margin-bottom: 1rem;
+}
+
+.portfolio p {
+  text-align: center;
+  max-width: 40rem;
+  margin: auto;
+  font-weight: 100;
+  line-height: 1.6;
+}
+
+.portfolio .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  justify-content: center;
+}
+
+.portfolio .row .portfolio-card {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.portfolio .row .portfolio-card img {
+  border-radius: 50%;
+  width: 80%;
+  border-color: 5px black;
+}
+
+.portfolio .row .portfolio-card .portfolio-card-title {
+  margin-top: 1.5rem auto 0.5rem;
+  color: darkslategrey;
+}
+
+.portfolio .row .portfolio-card .portfolio-card-title-keterangan {
+  margin-top: 0.5rem;
+  max-width: 18rem;
+  color: darkslategrey;
+}
+
+.portfolio .row .portfolio-card .portfolio-card-tahun {
+  margin-top: 1rem;
+  color: rgb(0, 0, 0);
+  font-style: oblique;
+}
+
+/* Portfolio Section End */
+
+/* Responsive Breakpoint */
+/* Responsive Tablet */
+
+@media screen and (max-width: 968px) {
+  nav ul {
+    width: 50%;
+  }
+  .about .row {
+    flex-wrap: wrap;
+  }
+  .about .row .about-img img {
+    height: 24rem;
+    object-fit: cover;
+    object-position: top;
+  }
+  .about .row .content {
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .menu-toogle {
+    display: flex;
+  }
+  nav ul {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100vh;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    background-color: darkslategrey;
+    z-index: -1;
+    transform: translateX(100%);
+    transition: all 1s;
+    opacity: 0;
+  }
+  .hero .content h1 {
+    font-size: 2.8rem;
+  }
+  .hero .content p {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav ul {
+    width: 50%;
+  }
+  .about .row .content {
+    margin-top: 1rem;
+  }
+  .hero .content h1 {
+    font-size: 3rem;
+  }
+  .hero .content p {
+    font-size: 1.2rem;
+  }
+}
+
+/* Responsive Handphone */
+
+@media screen and (max-width: 576px) {
+  .menu-toogle {
+    display: flex;
+  }
+  nav ul {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 80%;
+    height: 100vh;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    background-color: darkslategrey;
+    z-index: -1;
+    transform: translateX(100%);
+    transition: all 1s;
+    opacity: 0;
+  }
+
+  .about .row {
+    flex-wrap: wrap;
+  }
+
+  .about .row .content {
+    margin-top: 1rem;
+    margin-left: 0px;
+  }
+  .hero .content h1 {
+    font-size: 3rem;
+  }
+  .hero .content p {
+    font-size: 1.2rem;
+  }
+  .hero .content .cta {
+    position: relative;
+    font-size: 1.2rem;
+    border: 1px black;
+  }
+}
+
+nav ul.slide {
+  transform: translateX(0);
+  opacity: 1;
+}
